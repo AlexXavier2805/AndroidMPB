@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.MenuFragment"
+    android:orientation="vertical"
+    android:background="#1a1a1a"
+    android:layout_gravity="center">
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="30dp"/>
+
+    <ImageView
+        android:id="@+id/ivAlumna"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/perfilb"
+        android:contentDescription="@string/iv_perfil_desc_menu" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="20dp"/>
+
+    <TextView
+        android:id="@+id/tvNombre"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_gravity="center"
+        android:text="@string/tv_nombre_alumna_menu"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="10dp"/>
+
+    <TextView
+        android:id="@+id/tvIdAlumna"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:text="@string/tv_id_alumna_menu"
+        android:textAlignment="center"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#ffffff" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnHorario"
+        android:layout_gravity="center"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
+        android:paddingLeft="10dp"
+        app:backgroundTint="#7fff62"
+        android:text="@string/btn_horario_menu"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:drawableLeft="@drawable/ic_reloj"
+        android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+        android:drawablePadding="25dp" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnNota"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
+        android:layout_gravity="center"
+        android:paddingLeft="10dp"
+        app:backgroundTint="#e268ff"
+        android:text="@string/btn_nota_menu"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:drawableLeft="@drawable/ic_nota"
+        android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+        android:drawablePadding="25dp"/>
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnLink"
+        android:layout_gravity="center"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
+        android:paddingLeft="10dp"
+        app:backgroundTint="#ffab1e"
+        android:text="@string/btn_link_menu"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:drawableLeft="@drawable/ic_world"
+        android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+        android:drawablePadding="25dp" />
+
+    <androidx.legacy.widget.Space
+        android:layout_width="410dp"
+        android:layout_height="10dp"/>
+
+    <Button
+        android:id="@+id/btnUbicacion"
+        android:layout_gravity="center"
+        android:layout_width="335dp"
+        android:layout_height="57dp"
+        android:paddingLeft="10dp"
+        app:backgroundTint="#1976D2"
+        android:text="@string/btn_ubicacion_menu"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
+        android:drawableLeft="@drawable/ic_location"
+        android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+        android:drawablePadding="25dp"/>
+
+</LinearLayout>

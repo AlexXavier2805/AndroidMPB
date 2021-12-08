@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">ProyectoMPDB</string>
+    <string name="iv_logo_login">Imagen Logo</string>
+    <string name="tv_titulo_login">¡Al alcance de tu mano a toda hora!</string>
+    <string name="et_usuario_hint_login">Usuario</string>
+    <string name="et_password_hint_login">Password</string>
+    <string name="btn_ingresar_login">Ingresar</string>
+    <string name="tv_nombre_alumna_menu">Cynthia Novillo Vera</string>
+    <string name="tv_id_alumna_menu">ID: 749382BbahHiyy</string>
+    <string name="btn_horario_menu">Horario</string>
+    <string name="btn_nota_menu">Notas</string>
+    <string name="btn_curso_menu">Cursos</string>
+    <string name="btn_link_menu">Redes Sociales</string>
+    <string name="iv_perfil_desc_menu">Imagen Perfil</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="btn_ubicacion_menu">Ubicación</string>
+    <string name="bnv_menu">Menu</string>
+</resources>

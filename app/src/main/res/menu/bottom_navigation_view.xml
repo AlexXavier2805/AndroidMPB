@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_menu"
+        android:icon="@drawable/ic_menu"
+        android:title="@string/bnv_menu" />
+    <item
+        android:id="@+id/nav_courses"
+        android:icon="@drawable/ic_schedule"
+        android:title="@string/btn_curso_menu" />
+</menu>
