@@ -1,63 +1,41 @@
 package com.example.proyectompdb.view.fragments
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.proyectompdb.R
+import com.example.proyectompdb.databinding.FragmentNotaBinding
 import com.example.proyectompdb.view.adapters.NotaAdapter
-import com.example.proyectompdb.model.entity.*
+import com.example.proyectompdb.viewmodel.NotaViewModel
 
 class NotaFragment : Fragment() {
 
-    lateinit var recyclerView: RecyclerView
+    private lateinit var binding:FragmentNotaBinding
+
+    private val listaNotaViewModel: NotaViewModel by viewModels()
+
     private val adapter: NotaAdapter = NotaAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_nota, container, false)
+        binding = FragmentNotaBinding.inflate(inflater, container, false)
+        return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        recyclerView = view.findViewById(R.id.rvNota) as RecyclerView
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager = LinearLayoutManager(view.context)
-        adapter.NotaAdapter(getNotas(),view.context)
-        recyclerView.adapter=adapter
-    }
+        listaNotaViewModel.getListaCurso()
 
-    private fun getNotas():MutableList<NotaEntity>{
-        return mutableListOf(
-            NotaEntity(1,14.0,15.0,17.0,15.0,"FECHA",1,
-                MatriculaEntity(1,"NINGUNO",1,"FECHA",1,
-                    AlumnoEntity(1,"1234567","Alez","Martinez","Oscanoa","ASD","123435","FECHA",1,
-                        DistritoEntity(1,"AGUSTINO",1),
-                        ApoderadoEntity(1,"1234567","Rodolfo","Martine","Loapez","bvebe","1235415","FECHA",1,
-                            DistritoEntity(1,"AGUSTINO",1),
-                            UsuarioEntity(1,"APO","1235",1,
-                                RolEntity(1,"APO",1)
-                            )
-                        ),
-                        UsuarioEntity(1,"ALUMNO","1234125",1,
-                            RolEntity(1,"ASDF",1)
-                        )
-                    ),
-                    SeccionEntity(1,"SEC01",1,
-                        GradoEntity(1,"PRIMER GRADO",1),
-                        AulaEntity(1,"ASDF",1)
-                    )
-                ),
-                CursoEntity(1,"MATE","ASDF",1,
-                    GradoEntity(1,"PRImer grado",1)
-                )
-            ),
-        )
+        listaNotaViewModel.listaNotaEntity.observe(this,{
+            binding.rvNota.setHasFixedSize(true)
+            binding.rvNota.layoutManager = LinearLayoutManager(view.context)
+            adapter.NotaAdapter(it,view.context)
+            binding.rvNota.adapter = adapter
+        })
     }
 }

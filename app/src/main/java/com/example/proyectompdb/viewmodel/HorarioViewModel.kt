@@ -10,7 +10,7 @@ class HorarioViewModel : ViewModel() {
     val listaHorarioEntity = MutableLiveData<MutableList<HorarioEntity>>()
 
     fun getListaHorario(){
-        val provider =HorarioProvider()
+        val provider = HorarioProvider()
         val listaHorario = provider.getHorariosModel()
         listaHorarioEntity.postValue(listaHorario)
     }

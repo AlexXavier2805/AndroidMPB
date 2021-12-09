@@ -18,6 +18,7 @@ class HorarioFragment : Fragment() {
 
     //Instancia de la clase HorarioViewModel
     private val listaHorarioViewModel:HorarioViewModel by viewModels()
+
     //Adaptador de RecyclerView
     private val adapter: HorarioAdapter = HorarioAdapter()
 
