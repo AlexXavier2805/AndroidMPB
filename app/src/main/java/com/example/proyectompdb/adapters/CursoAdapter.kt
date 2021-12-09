@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectompdb.R
-import com.example.proyectompdb.model.CursoEntity
+import com.example.proyectompdb.model.entity.CursoEntity
 
 class CursoAdapter : RecyclerView.Adapter<CursoAdapter.ViewHolder>(){
 
@@ -25,11 +25,11 @@ class CursoAdapter : RecyclerView.Adapter<CursoAdapter.ViewHolder>(){
         val tvDescripcion = itemView.findViewById<TextView>(R.id.tvDescripcionCurso)
         val tvGrado = itemView.findViewById<TextView>(R.id.tvGrado)
 
-        fun bind(cursos:CursoEntity, context: Context){
-            tvIdCurso.text = cursos.idCurso
-            tvNombre.text = cursos.nombreCurso
-            tvDescripcion.text = cursos.descripcionCurso
-            tvGrado.text = cursos.grado
+        fun bind(cursos: CursoEntity, context: Context){
+            tvIdCurso.text = cursos.cursoId.toString()
+            tvNombre.text = cursos.nombre
+            tvDescripcion.text = cursos.descripcion
+            tvGrado.text = cursos.grado.nombre
         }
     }
 

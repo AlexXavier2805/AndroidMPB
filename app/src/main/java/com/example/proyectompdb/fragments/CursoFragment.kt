@@ -9,7 +9,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectompdb.R
 import com.example.proyectompdb.adapters.CursoAdapter
-import com.example.proyectompdb.model.CursoEntity
+import com.example.proyectompdb.model.entity.CursoEntity
+import com.example.proyectompdb.model.entity.GradoEntity
 
 class CursoFragment : Fragment() {
 
@@ -33,13 +34,21 @@ class CursoFragment : Fragment() {
     }
 
     private fun getCursos(): MutableList<CursoEntity> {
+
         return mutableListOf(
-            CursoEntity("1", "Matematica I", "Matematica Basica I", "Primer Grado"),
-            CursoEntity("2", "Comunicacion I", "Comunicacion Basica", "Primer Grado"),
-            CursoEntity("3", "Ingles", "Ingles Basico", "Primer Grado"),
-            CursoEntity("4", "Historia", "Historia Basico", "Primer Grado"),
-            CursoEntity("5", "Civica", "Civica Basico", "Primer Grado"),
-            CursoEntity("6", "Arte", "Arte Basico", "Primer Grado")
+            CursoEntity(1, "Matematica I", "Matematica Basica I", 1,
+                GradoEntity(1,"Primer Grado",1)
+            ),
+            CursoEntity(2, "Comunicacion I", "Comunicacion Basica I", 1,
+                GradoEntity(1,"Primer Grado",1)
+            ),
+            CursoEntity(3, "Historia I", "Historia Basica I", 1,
+                GradoEntity(1,"Primer Grado",1)
+            ),
+            CursoEntity(4, "Civica I", "Civica Basica I", 1,
+                GradoEntity(1,"Primer Grado",1)
+            )
         )
+        return mutableListOf()
     }
 }

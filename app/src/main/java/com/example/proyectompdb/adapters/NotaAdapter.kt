@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectompdb.R
-import com.example.proyectompdb.model.NotaEntity
+import com.example.proyectompdb.model.entity.NotaEntity
 
 class NotaAdapter : RecyclerView.Adapter<NotaAdapter.ViewHolder>(){
 
@@ -26,7 +26,7 @@ class NotaAdapter : RecyclerView.Adapter<NotaAdapter.ViewHolder>(){
         val tvTercerBimestre = itemView.findViewById<TextView>(R.id.tvTercerBimestre)
         val tvCuartoBimestre = itemView.findViewById<TextView>(R.id.tvCuartoBimestre)
         fun bind(nota: NotaEntity, context: Context){
-            tvNombreCurso.text = nota.nombreCurso
+            tvNombreCurso.text = nota.curso.nombre
             tvPrimerBimestre.text = nota.primerBimestre.toString()
             tvSegundoBimestre.text = nota.segundoBimestre.toString()
             tvTercerBimestre.text = nota.tercerBimestre.toString()

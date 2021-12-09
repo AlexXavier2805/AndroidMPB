@@ -7,14 +7,14 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectompdb.R
-import com.example.proyectompdb.model.HorarioEntity
+import com.example.proyectompdb.model.entity.HorarioEntity
 
 class HorarioAdapter : RecyclerView.Adapter<HorarioAdapter.ViewHolder>(){
 
     private var horarios:MutableList<HorarioEntity> = ArrayList()
     lateinit var context: Context
 
-    fun HorarioAdapter(horarios: MutableList<HorarioEntity>,context: Context){
+    fun HorarioAdapter(horarios: MutableList<HorarioEntity>, context: Context){
         this.horarios = horarios
         this.context = context
     }
@@ -28,12 +28,12 @@ class HorarioAdapter : RecyclerView.Adapter<HorarioAdapter.ViewHolder>(){
         val tvAula = itemView.findViewById<TextView>(R.id.tvAula)
 
         fun bind(horarios: HorarioEntity, context: Context){
-            tvDia.text = horarios.dia
-            tvCurso.text = horarios.nombreCurso
-            tvDocente.text = horarios.docente
+            tvDia.text = horarios.dia.substring(0,3)
+            tvCurso.text = horarios.asignacion.curso.nombre
+            tvDocente.text = horarios.asignacion.trabajador.nombre
             tvHoraInicio.text = horarios.horaInicio
             tvHoraFin.text = horarios.horaFin
-            tvAula.text = horarios.aula
+            tvAula.text = horarios.seccion.aula.descripcion
         }
     }
 
