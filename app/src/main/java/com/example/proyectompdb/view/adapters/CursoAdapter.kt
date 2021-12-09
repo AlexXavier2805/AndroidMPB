@@ -1,4 +1,4 @@
-package com.example.proyectompdb.adapters
+package com.example.proyectompdb.view.adapters
 
 import android.content.Context
 import android.view.LayoutInflater

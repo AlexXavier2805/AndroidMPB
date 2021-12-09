@@ -10,10 +10,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProyectoMPDB">
         <activity
-            android:name=".MenuActivity"
+            android:name="com.example.proyectompdb.view.activities.MenuActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.proyectompdb.view.activities.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

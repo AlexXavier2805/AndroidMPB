@@ -1,4 +1,4 @@
-package com.example.proyectompdb.fragments
+package com.example.proyectompdb.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,14 +8,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectompdb.R
-import com.example.proyectompdb.adapters.CursoAdapter
+import com.example.proyectompdb.view.adapters.CursoAdapter
 import com.example.proyectompdb.model.entity.CursoEntity
 import com.example.proyectompdb.model.entity.GradoEntity
 
 class CursoFragment : Fragment() {
 
     lateinit var recyclerView: RecyclerView
-    val adapter:CursoAdapter = CursoAdapter()
+    val adapter: CursoAdapter = CursoAdapter()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

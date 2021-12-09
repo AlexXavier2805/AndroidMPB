@@ -1,10 +1,11 @@
-package com.example.proyectompdb
+package com.example.proyectompdb.view.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.proyectompdb.fragments.CursoFragment
-import com.example.proyectompdb.fragments.MenuFragment
+import com.example.proyectompdb.R
+import com.example.proyectompdb.view.fragments.CursoFragment
+import com.example.proyectompdb.view.fragments.MenuFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MenuActivity : AppCompatActivity() {

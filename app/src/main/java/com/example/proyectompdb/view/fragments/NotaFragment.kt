@@ -1,4 +1,4 @@
-package com.example.proyectompdb.fragments
+package com.example.proyectompdb.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.proyectompdb.R
-import com.example.proyectompdb.adapters.NotaAdapter
+import com.example.proyectompdb.view.adapters.NotaAdapter
 import com.example.proyectompdb.model.entity.*
 
 class NotaFragment : Fragment() {

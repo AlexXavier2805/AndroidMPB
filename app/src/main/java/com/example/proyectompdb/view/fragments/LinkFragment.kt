@@ -1,4 +1,4 @@
-package com.example.proyectompdb.fragments
+package com.example.proyectompdb.view.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
